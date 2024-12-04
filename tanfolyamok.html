@@ -24,29 +24,36 @@
                     hanyfo: {
                         required: true,
                     },
-                    konyhai_tapasztalat{
+                    telefonszam: {
                         required: true,
-                    },
+                        digits: true,
+                    }
                 },
                 messages: {
                     nev: " Kérlek add meg a neved! ",
                     email: {
-                        required: " Kérlek adj meg egy e-mail címet!",
-                        email: " Helytelen formátum ",
+                        required: " Adj meg egy e-mail címet!",
+                        email: " Helytelen formátum! ",
                     },
                     kurzus: {
-                        required: " Válassz egy kurzust ",
+                        required: " Válassz egy kurzust! ",
                     },
                     hanyfo: {
                         required: " Válassz létszámot ",
                     },
-                    konyhai_tapasztalat{
-                        required: " Válassz egy értéket ",
-                    },
+                    telefonszam: {
+                        required: " Adj meg egy telefonszámot! ",
+                        digits: " Kérlek telefonszámot adj meg "
+                    }
                 },
             });
         });
     </script>
+    <style>
+        label.error {
+        color: red;
+        }
+    </style>
     <title>Kelet ízei/Tanfolyamok</title>
 </head>
 
@@ -68,7 +75,7 @@
     </lenyit>
     </nav>
     <main class="kezdo">
-        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="form" target="_blank">
+        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="myform" target="_blank" novalidate="novalidate">
             <div class="kozep">
                 Jelentkezz főző tanfolyamainkra egyedül vagy akár többmagaddal még ma!  
             </div>
@@ -78,6 +85,9 @@
                 </div>
                 <div>
                     <label>E-mail cím: <br><input type="text" name="email" size="25"></label>
+                </div>
+                <div>
+                    <label>Telefonszám: <br><input type="tel" name="telefonszam" size="25"></label>
                 </div>
                 <div>
                     Melyik kurzusra szeretnél jelentkezni?
@@ -106,13 +116,22 @@
                     <br>
                     <label><input type="checkbox" name="laktoz_erzekenyseg" value="igen">Laktózérzékenység</label>
                     <br>
-                    <label><input type="checkbox" name="gluten_erzekenyseg"  value="igen">Gluténérzékenység</label>
+                    <label><input type="checkbox" name="gluten_erzekenyseg" value="igen">Gluténérzékenység</label>
                     <br>
                     <label><input type="checkbox" name="tojas_allergia"  value="igen">Tojás</label>
                     <br>
                     <label><input type="checkbox" name="szoja_allergia" value="igen">Szója</label>
                     <br>
                     Egyéb: <input type="text" name="egyeb_allergia">
+                </div>
+                <div>
+                    Milyen étrendet követsz?
+                    <br> 
+                    <label><input type="radio" name="etkezes" value="normal" checked>normál</label>
+                    <br>
+                    <label><input type="radio" name="etkezes" value="vegetarianus">vegetáriánus</label>
+                    <br>
+                    <label><input type="radio" name="etkezes" value="vegan">vegán</label>
                 </div>
                 <div>
                     Mennyire érzed magad otthon a konyhában?
