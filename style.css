@@ -1,0 +1,586 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Arial";
+    background-color: #DAB88B;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header {
+    padding: 5px;
+    margin: 0px;
+    background-color: black;
+    height: 43px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Secular One", "Arial";
+}
+
+header h1{
+    font-size: 150%;
+    color: white;
+}
+
+menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#harmadik{
+order: 2;
+}
+
+#negyedik{
+order: 3;
+}
+
+#orszag{
+order: 1;
+}
+
+nav {
+    background-image: url(kepek/kep5.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 5px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+nav a {
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 110%;
+    font-weight: bold;
+    border-top: white solid 2px;
+    border-bottom: white solid 2px;
+    margin: 2px 0 2px 0;
+    padding: 7px;
+    min-height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orszag {
+    display: none;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: black;
+    border-bottom: white solid 2px;
+    flex-basis: 75%;
+    border-radius: 15px;
+    margin-bottom: 2px;
+}
+
+.nyito.megjelen{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.orszag.megjelen {
+    display: flex;
+}
+
+.orszag a {
+    margin-top: 0;
+    padding: 8px;
+    font-size: 105%;
+    min-height: 25px;
+    width: 100%;
+    border-top: white solid 2px;
+    border-bottom: white solid 2px;
+}
+
+.orszag table{
+    margin: 5px 0;
+    border-spacing: 8px;
+    width: 100%;
+}
+
+nav a.active {
+    border: white solid 3px;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    background-color: rgb(75, 75, 75);
+    border: white solid 2px;
+}
+
+.orszag a:hover {
+    background-color: rgb(75, 75, 75);
+    border: white solid 2px;
+}
+
+#nyito.active{
+    text-decoration: none;
+}
+
+.keletizei{
+    font-style: italic;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Secular One", "Arial";
+    width: 100%;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2.5px 0;
+    padding: 2%;
+    background-color: rgb(228, 207, 175);
+    border: black 3px solid;
+    border-radius: 8px;
+    width: 98%;
+}
+
+#egymasala{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#alcim{
+    font-size: 110%;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 35px;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+hr{
+    width: 99%;
+    border: 1px solid #967144;
+    margin: 10px 0;
+}
+
+p{
+    margin: 5px;
+    text-align: justify;
+}
+
+article ul{
+    margin: 5px 30px;
+    padding: 0;
+}
+
+article li{
+    margin: 5px 0;
+}
+
+.kiemel{
+    font-weight: bold;
+}
+
+.alalcim{
+    text-align: center;
+    font-size: 110%;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.kezdolapkep{
+    width: 98%;
+    border-radius: 8px;
+    margin: 3px 0;
+}
+
+footer{
+    color: white;
+    background-color: black;
+    margin: 0;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+#szoveg{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#szoveg p{
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    width: 100%;
+    text-align: start;
+}
+
+#logok {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+#logok img{
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 0 5px;
+}
+
+#logok img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.kezdo{
+    margin-top: 5px;
+}
+
+.receptek .etelszoveg{
+    margin: 0;
+    padding: 0;
+}
+
+.receptek .etelkep{
+    margin: 0;
+    padding: 0;
+    width: 75%;
+    border-radius: 8px;
+}
+
+.receptek .kepresz{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.receptek hr{
+    width: 78%;
+}
+
+.receptek .section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.receptek .section p{
+    align-self: center;
+}
+
+.receptek .section ol p{
+    text-align: start;
+}
+
+#elsosection{
+    display: none;
+}
+
+#elsosection.megjelen{
+    display: flex;
+}
+
+#masodiksection{
+    display: none;
+}
+
+#masodiksection.megjelen{
+    display: flex;
+}
+
+#harmadiksection{
+    display: none;
+}
+
+#harmadiksection.megjelen{
+    display: flex;
+}
+
+#ugras{
+    color: black;
+    width : 100%;
+}
+
+#ugras p{
+    text-align: center;
+}
+
+.form1{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 95%;
+    margin-left: 5%;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2.5px 0;
+    padding: 2%;
+    background-color: rgb(228, 207, 175);
+    border: black 3px solid;
+    border-radius: 8px;
+    width: 98%;
+}
+
+.form1 div{
+    margin: 5px 0;
+    padding: 0;
+}
+
+.kozep{
+    text-align: justify;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#gombok{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+}
+
+#kuldes{
+    margin-right: 5px;
+}
+
+.gomb{
+    width: 10em;
+    height: 2em;
+}
+
+#range{
+    width: 25em;
+}
+
+.slider{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.slick-slide{
+    margin: 0px 5px;
+}
+
+.slick-slide img{
+    width: 100%;
+}
+
+.slick-prev:before, .slick-next:before{
+    color: black;
+}
+.slick-slide{
+    transition: all ease-in-out 0.3s;
+    opacity: 0.2;
+}
+
+.slick-active{
+    opacity: 0.5;
+}
+
+.slick-current{opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+        padding: 7px 0 7px 0;
+        height: 400px;
+    }
+    
+    nav a {
+        width: 24.5%;
+        margin: 0;
+        padding: 8px;
+    }
+    
+    .orszag{
+        flex-basis: 24.5%;
+        position: relative;
+        right: 12.5%;
+    }
+
+    .orszag.a{
+        padding: 8px;
+        width: 25%;
+    }
+
+    .orszag table{
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    #orszag{
+        order: 4;
+    }
+
+    #form{
+        flex-basis: 99%;  
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    article{
+        width: 99%;
+        padding: 0.5%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    article p{
+        text-align: center;
+    }
+
+    #kezdokep{
+        width: 50%;
+    }
+
+    #udv{
+        order: 0;
+    }
+
+    #miert{
+        order: 0;
+        width: 49.35%;
+        height: 1000px;
+        margin-right: 0.3%;
+    }
+
+    #egymasala{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 49.35%; 
+    }
+
+    #utazas{
+        order: 0;
+        height: 497.5px;
+        width: 100%;
+    }
+
+    #hogyan{
+        order: 0;
+        height: 497.5px;
+        width: 100%;
+    }
+
+    .receptek hr{
+        display: none;
+    }
+
+    .receptek article{
+        flex-direction: row;
+    }
+
+    .receptek .etelszoveg{
+        flex-basis: 35%;
+    }
+
+    .receptek .kepresz{
+        flex-basis: 60%;
+    }
+
+    .receptek .etelkep{
+        flex-basis: 100%;
+    }
+
+    .receptek .masodik .etelszoveg{
+        order: 1;
+    }
+
+    .receptek .masodik .section{
+        order: 2;
+    }
+
+    .receptek .section{
+        margin-top: 10px;
+    }
+
+    .form1{
+        align-items: flex-start;
+        flex-basis: 40%;
+    }
+
+    #form{
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.5%;
+    }
+
+    .form1 div{
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .form1{
+        flex-basis: 30%;
+        margin-left: 10%;
+    }
+}

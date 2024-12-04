@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Krizbai Csaba">
+    <link rel="icon" href="kepek/ikon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Secular+One&display=swap" rel="stylesheet">
+    <script src="jquery/jquery-3.7.1.js"></script>
+    <script src="jquery/validator/dist/jquery.validate.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+            $("#myform").validate({
+                rules: {
+                    nev: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    kurzus: {
+                        required: true,
+                    },
+                    hanyfo: {
+                        required: true,
+                    },
+                    konyhai_tapasztalat{
+                        required: true,
+                    },
+                },
+                messages: {
+                    nev: " Kérlek add meg a neved! ",
+                    email: {
+                        required: " Kérlek adj meg egy e-mail címet!",
+                        email: " Helytelen formátum ",
+                    },
+                    kurzus: {
+                        required: " Válassz egy kurzust ",
+                    },
+                    hanyfo: {
+                        required: " Válassz létszámot ",
+                    },
+                    konyhai_tapasztalat{
+                        required: " Válassz egy értéket ",
+                    },
+                },
+            });
+        });
+    </script>
+    <title>Kelet ízei/Tanfolyamok</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kelet ízei</h1>
+    </header>
+    <nav class="container">
+        <a href="index.html">Kezdőlap</a>
+        <a id="nyito" class="nyito" href="#">Receptek <span id="nyil">⮟</span></a>
+        <a id="harmadik" class="active" href="#">Tanfolyamok</a>
+        <a id="negyedik" href="galeria.html">Galéria</a>   
+    <lenyit class="orszag" id="orszag">
+        <table>
+            <tr><td><a href="indiai.html">indiai</a></td></tr>
+            <tr><td><a href="kinai.html">kínai</a></td></tr>
+            <tr><td><a href="thai.html">thai</a></td></tr>
+        </table>
+    </lenyit>
+    </nav>
+    <main class="kezdo">
+        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="form" target="_blank">
+            <div class="kozep">
+                Jelentkezz főző tanfolyamainkra egyedül vagy akár többmagaddal még ma!  
+            </div>
+            <div class="form1">
+                <div>
+                    <label>Teljes név: <br><input type="text" name="nev" size="25"></label>
+                </div>
+                <div>
+                    <label>E-mail cím: <br><input type="text" name="email" size="25"></label>
+                </div>
+                <div>
+                    Melyik kurzusra szeretnél jelentkezni?
+                    <br>
+                    <label><input type="radio" name="kurzus" value="indiai">Indiai curry és naan készítés</label>
+                    <br>
+                    <label><input type="radio" name="kurzus" value="kinai">Kínai kacsa és sült rizs készítés</label>
+                    <br>
+                    <label><input type="radio" name="kurzus" value="thai">Thai kókusztejes leves és pad thai készítés</label>
+                </div>
+                <div>
+                    <label>Hány főre szeretnél jelentkezni? (Belértve magadat is.)
+                    <select name="hanyfo" id="hanyfo">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select></label>
+                </div>
+            </div>
+            <div class="form1">
+                <div>
+                    Van-e bármilyen ételallergiád/ételallergiátok?
+                    <br>
+                    <label><input type="checkbox" name="laktoz_erzekenyseg" value="igen">Laktózérzékenység</label>
+                    <br>
+                    <label><input type="checkbox" name="gluten_erzekenyseg"  value="igen">Gluténérzékenység</label>
+                    <br>
+                    <label><input type="checkbox" name="tojas_allergia"  value="igen">Tojás</label>
+                    <br>
+                    <label><input type="checkbox" name="szoja_allergia" value="igen">Szója</label>
+                    <br>
+                    Egyéb: <input type="text" name="egyeb_allergia">
+                </div>
+                <div>
+                    Mennyire érzed magad otthon a konyhában?
+                    <br>
+                    <input type="range" name="konyhai_tapasztalat" min="1" max="100" value ="50" id="range">
+                </div>
+            </div>
+            <div id="gombok">
+                <input type="submit" id="kuldes" class="gomb">
+                <input type="reset" class="gomb">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div id="szoveg">
+        <p>Kövesd közösségi oldalainkat!</p>
+        </div>
+        <div id="logok">
+            <a href="https://www.facebook.com/" target="_blank"><img src="kepek/facebook.jpg" alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="kepek/instagram.jpg" alt="instagram"></a>
+        </div>
+    </footer>
+    <script src="javascript/lenyilo.js"></script>
+</body>
+</html>
